@@ -1,5 +1,8 @@
 FROM httpd:2.4
 
+RUN apt update
+RUN apt install nano
+
 # LOAD MODIFIED CONFIG FILE
 COPY ./httpd.conf /usr/local/apache2/conf/
 
